@@ -62,3 +62,18 @@ python benchmark.py 16777216
 
 
 * [ ] informe con Amdahl y análisis (memoria, GIL de Python, sobre-suscripción, fracción secuencial, tamaño de bloque, …).
+
+  # Resultados del testeo
+
+* secuencial: N=16777216 suma=16777216.0 tiempo_ms=153.90
+* paralelo: N=16777216 T=4 suma=16777216.0
+* threading: hardware_concurrency=12 N=16777216
+```
+  hilos,ms,speedup,suma
+  seq,158.62,1.00,16777216.0
+  1,131.97,1.20,16777216.0
+  2,108.56,1.46,16777216.0
+  4,124.64,1.27,16777216.0
+  8,128.95,1.23,16777216.0
+  16,119.22,1.33,16777216.0
+```
